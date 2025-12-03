@@ -1,158 +1,185 @@
-# Trabalho-Estrutura-de-dados
+# Trabalho – Estrutura de Dados
 
-## Visão Geral
-Este documento contém a proposta completa do trabalho. O objetivo é entregar um trabalho que cubra:
-Estruturas de dados básicas (pilha, fila, fila circular, lista, lista encadeada, dicionário/objetos)
-Manipulação de CSV (leitura e escrita)
-Árvores (BST e AVL)
-Ordenação (Pelo menos dois Algoritmos, um O(n²) e outro O(nlogn)
-Busca linear e busca binária
-Análise assintótica (complexidade Big O)
-O trabalho foi projetado para execução em 3 horas de aula, em grupos de 5 alunos.
+## 📌 Visão Geral
+Este documento descreve a proposta completa do trabalho. O objetivo é entregar um projeto que envolva:
 
+- Estruturas de dados básicas (pilha, fila, fila circular, lista, lista encadeada, dicionário/objetos)  
+- Manipulação de CSV (leitura e escrita)  
+- Árvores (BST e AVL)  
+- Ordenação (pelo menos dois algoritmos: um O(n²) e outro O(n log n))  
+- Busca linear e busca binária  
+- Análise assintótica (complexidade Big O)
 
+O trabalho foi projetado para ser realizado em **3 horas de aula**, em grupos de **5 alunos**.
 
-## Dataset
-Usar apenas o arquivo results.csv do dataset Global Football Goalscorers Dataset (Kaggle). Todas as tarefas, filtros e arquivos gerados devem partir desse CSV.
-date — A data em que a partida internacional de futebol foi disputada.
-home_team — A seleção nacional listada como time da casa ou equipe anfitriã da partida.
-away_team — A seleção nacional que jogou como visitante ou equipe de fora.
-home_score — O número de gols marcados pelo time da casa durante a partida.
-away_score — O número de gols marcados pelo time visitante durante a partida.
-tournament — O nome da competição ou evento ao qual a partida pertence (World Cup, Friendly, Asian Cup, Copa América)
-city — A cidade onde a partida foi realizada.
-country — O país no qual a partida ocorreu.
-neutral — Indica se a partida foi disputada em um campo neutro.
+---
 
+## 📂 Dataset
+Utilizar **apenas** o arquivo `results.csv` do dataset **Global Football Goalscorers Dataset (Kaggle)**.
 
+Todas as tarefas, filtros e arquivos gerados deverão partir deste CSV.
 
+### Campos:
+- **date** — Data da partida  
+- **home_team** — Seleção mandante  
+- **away_team** — Seleção visitante  
+- **home_score** — Gols do time da casa  
+- **away_score** — Gols do time visitante  
+- **tournament** — Torneio (World Cup, Friendly etc.)  
+- **city** — Cidade da partida  
+- **country** — País  
+- **neutral** — Campo neutro (TRUE/FALSE)
 
+---
 
-## Entregáveis Esperados
-Código fonte (módulos Python) organizado como indicado.
-matches_summary.csv gerado pelo programa (formato descrito abaixo).
-Relatório (PDF ou MD) com: arquitetura, explicações de complexidade, prints de execução e contribuição de cada membro.
+## 📦 Entregáveis Esperados
+- Código fonte organizado em módulos Python  
+- Arquivo gerado: `matches_summary.csv`  
+- Relatório (PDF ou MD) contendo:
+  - arquitetura
+  - complexidade Big O
+  - evidências de execução
+  - contribuição de cada membro
 
+---
 
+## 🧩 Etapa 1 — Modelagem: Classes `Match` e `Team`
+### Objetivo:
+Representar cada partida utilizando classes Python.
 
-## Etapa 1 Modelagem: Classes Match, Team
-CAPACIDADE:
-Manipular estruturas de dados;
-Implementar estruturas de dados;
-Selecionar estruturas de dados de forma adequada para a resolução de problemas computacionais; 
-Critérios avaliativos
-Utilização Lógica das Estruturas;
-Desenvolvimento Prático dos Algoritmos;
-Objetivo: definir estruturas heterogênea que representa cada partida. (Utilize Class em python)
-O que fazer:
-Implementar src/data_structs.py:
-Classe Team com atributos: name (string) e score (int).
-Classe Match com atributos: date (datetime), home_team(Team), away_team(Team), tournament(string), city(string), country(string), neutral(bool).
-Método total_goals() que retorna todos os gols da partida.
-Método to_list() que retorna uma linha para gravação CSV (ano, país, home_team.name, away_team.name, placar (ex: 2 x 0).
-Complexidade dos Algoritmos (Big O)
+### O que implementar:
+Arquivo `src/data_structs.py`:
+- Classe **Team**  
+  - `name: string`  
+  - `score: int`
 
+- Classe **Match**  
+  - `date (datetime)`  
+  - `home_team (Team)`  
+  - `away_team (Team)`  
+  - `tournament (string)`  
+  - `city (string)`  
+  - `country (string)`  
+  - `neutral (bool)`
 
+### Métodos:
+- `total_goals()` → retorna a soma de gols do jogo  
+- `to_list()` → retorna linha pronta para CSV (ano, país, times e placar)
 
+### Avaliação:
+- Uso correto das estruturas  
+- Implementação dos algoritmos  
+- Complexidade Big O
 
-## Etapa 2  Leitura do CSV e população das estruturas
-CAPACIDADE:
-Manipular estruturas de dados;
-Implementar estruturas de dados;
-Manipular arquivos de dados (binários e texto) 
-Critérios avaliativos
-Utilização Lógica das Estruturas;
-Desenvolvimento Prático dos Algoritmos;
-Objetivo: ler results.csv, criar Match para cada linha e popular as estruturas básicas.
-O que fazer:
-Em main.py, abrir data/results.csv com o módulo csv.
-Para cada linha válida, criar Match e inserir em uma estrutura de dados:
-Escolha uma ED e popule com os objetos de Match (Lista, Fila, Pilha, Lista Encadeada, Fila Circular...)
-Filtrar linhas com dados faltantes (explicar no relatório como trataram).
-Complexidade dos Algoritmos (Big O)
-Saída obrigatória nesta etapa: número total de jogos lidos e gravados.
+---
 
+## 📥 Etapa 2 — Leitura do CSV e Criação das Estruturas
+### Objetivo:
+Ler `results.csv`, criar objetos Match e inserir em uma estrutura de dados escolhida.
 
+### Tarefas:
+- Abrir `data/results.csv` com `csv`  
+- Para cada linha válida, criar `Match`  
+- Inserir em uma ED: Lista, Pilha, Fila, Lista Encadeada etc.  
+- Filtrar linhas com dados faltantes  
+- Explicar no relatório como foram tratados  
+- Exibir número total de jogos lidos
 
+### Avaliação:
+- Implementação e uso das EDs  
+- Complexidade Big O
 
-## Etapa 3 : Implementar BSTs
-CAPACIDADE:
-Manipular estruturas de dados;
-Implementar estruturas de dados;
-Critérios avaliativos
-Utilização Lógica das Estruturas;
-Desenvolvimento Prático dos Algoritmos;
-Objetivo: agrupar Seleções (Teams) por Gols Marcados usando uma BST simples (não balanceada).
-O que fazer:
-Implementar 2 BSTs em src/bst.py, ambas com nós contendo Seleção / Quantidade de Gols, porém, uma ordenada pelo nome de cada Seleção e a outra pela soma de gols de cada Seleção.
-Inserção: Inserir na primeira árvore as seleções em ordem alfabética.  Criar uma lista para segunda árvore com as Seleções, comparar string home_team /away_team (lexicográfico). Se país já existe, somar os gols. Com a Lista Pronta, crie a BST com os dados da lista.
-Funções: insert(seleção), inorder() (retorna seleções em ordem de gols).
-Complexidade dos Algoritmos (Big O)
+---
 
+## 🌳 Etapa 3 — Implementar BSTs
+### Objetivo:
+Agrupar seleções por gols usando duas BSTs:
 
+1. **BST ordenada pelo nome da Seleção**
+2. **BST ordenada pelo total de gols da Seleção**
 
-## Etapa 4  Ordenação
-CAPACIDADE:
-Manipular estruturas de dados;
-Implementar estruturas de dados;
-Selecionar e implementar métodos de ordenação. 
-Critérios avaliativos
-Utilização Lógica das Estruturas;
-Desenvolvimento Prático dos Algoritmos;
-Objetivo: implementar e comparar dois algoritmos de ordenação.
-O que fazer:
-src/sorting.py com:
-Estável, O(n log n)
-O(n²)
-Aplicação prática: ordenar lista de Seleções(Teams) por Pontos ()
-Cada Vitória = 3 pontos
-Cada Empate = 1 ponto
-Derrotas não valem pontos
-Gerar duas saídas: top 10 Seleções com mais pontos e top 10 com menos pontos.
-Complexidade dos Algoritmos (Big O)
+### Tarefas:
+- Criar `src/bst.py`
+- Funções:  
+  - `insert(selecao)`  
+  - `inorder()` → retorna seleções ordenadas por gols
+- Somar os gols por seleção antes de montar a segunda árvore
 
+### Avaliação:
+- Implementação correta da árvore  
+- Uso lógico da ED  
+- Complexidade Big O
 
+---
 
-## Etapa 5 AVL por Pontos 
-CAPACIDADE:
-Manipular estruturas de dados;
-Implementar estruturas de dados;
-Critérios avaliativos
-Utilização Lógica das Estruturas;
-Desenvolvimento Prático dos Algoritmos;
-Objetivo: organizar partidas por Pontos de Cada Seleção (Team) numa árvore balanceada AVL, utilizando a lista ordenada da Etapa 5.
+## 🔃 Etapa 4 — Ordenação
+### Objetivo:
+Implementar dois algoritmos:
 
-O que fazer:
-Implementar src/avl_points.py com nó Seleção/Pontos.
-Implementar rotações (left, right, left-right, right-left) e atualização de altura.
-Usar a Lista com todas as Seleções e seus respectivos Pontos já ordenada da Etapa 5
-Funções: insert(seleção), root() que retorna a raiz da árvore, height() retorna a altura da árvore.
+- Um **O(n log n)** (ex.: Merge Sort)  
+- Um **O(n²)** (ex.: Bubble Sort)
 
+### Aplicação:
+Ordenar seleções por **Pontos**, onde:
+- Vitória = 3 pontos  
+- Empate = 1 ponto  
+- Derrota = 0
 
+### Saídas obrigatórias:
+- Top 10 seleções com mais pontos  
+- Top 10 seleções com menos pontos
 
-## Etapa 6 Geração do CSV matches_summary.csv 
-CAPACIDADE:
-Manipular arquivos de dados (binários e texto); 
-Selecionar e implementar métodos de pesquisa; 
-Critérios avaliativos
-Utilização Lógica das Estruturas;
-Desenvolvimento Prático dos Algoritmos;
-Objetivo: salvar resumo com campos essenciais.
-Formato do CSV de saída:
-year,country,home_team,away_team,score (score = "home_score-away_score")
-O que fazer: ao final, gravar todos os Match processados em output/matches_summary.csv.
+Arquivo: `src/sorting.py`
 
+### Avaliação:
+- Comparação dos métodos  
+- Complexidade Big O
 
+---
 
-## Etapa 7 Relatório e Análise Assintótica
-CAPACIDADE:
-Manipular estruturas de dados;
-Implementar estruturas de dados;
-Critérios avaliativos
-Desenvolvimento lógico e Teórico;
-Cálculos e Análises das Complexidades de todas as Etapas;
-Objetivo: descrever complexidades, justificar escolhas e assinar contribuições.
-O que deve conter:
-Complexidade das operações (inserção, remoção, busca) para cada estrutura implementada.
-Comparação teórica BST vs AVL.
+## ⚖️ Etapa 5 — AVL por Pontos
+### Objetivo:
+Organizar seleções com seus pontos em uma **árvore AVL**.
 
+### Tarefas:
+Arquivo `src/avl_points.py`:
+- Implementar nó com Seleção + Pontos  
+- Implementar rotações:
+  - left
+  - right
+  - left-right
+  - right-left
+- Usar lista ordenada da etapa 4
+
+### Funções:
+- `insert(selecao)`
+- `root()`
+- `height()`
+
+---
+
+## 📝 Etapa 6 — Gerar `matches_summary.csv`
+### Objetivo:
+Criar CSV com resumo das partidas.
+
+### Formato: year,country,home_team,away_team,score
+Onde:
+- score = `"home_score-away_score"`
+
+### Tarefa:
+Salvar em:  
+`output/matches_summary.csv`
+
+---
+
+## 📊 Etapa 7 — Relatório e Análise Assintótica
+### O relatório deve conter:
+- Complexidades (inserção, remoção, busca) de todas as estruturas  
+- Comparação teórica BST vs AVL  
+- Justificativa das escolhas  
+- Contribuição dos membros  
+
+---
+
+✔ **README formatado e pronto para uso!**  
+Se quiser, posso gerar também um *template* do repositório ou os arquivos iniciais do projeto.
