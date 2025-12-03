@@ -160,9 +160,10 @@ Conclusão: a BST é mais simples de implementar, porém pode perder desempenho 
 ---
 
 
-## 9. Conclusão Final
+## 8. Conclusão Final
 
 O projeto permitiu aplicar na prática os conceitos de estruturas de dados, algoritmos de ordenação, árvores binárias e análise assintótica. A escolha das estruturas foi feita visando desempenho, organização e clareza dos dados.
 
 ---
+
 
