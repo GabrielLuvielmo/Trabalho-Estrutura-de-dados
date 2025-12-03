@@ -1,5 +1,13 @@
 # ETAPA 7 — RELATÓRIO E ANÁLISE ASSINTÓTICA (Big O)
 
+## Contribuição dos Integrantes
+
+- Gabriel Luvielmo: Leitura do CSV e implementação das classes.
+- Vitor Kurth: Implementação das Bst's
+- Pedro Zanette e Gabriel Mosquer: Algoritmos de ordenação e busca.
+- Arthur Kremer: Implementação da AVL.
+- Guilherme Santos Oliveira: Relatório e geração do HTML.
+
 ## 1. Introdução
 
 Esta etapa tem como objetivo apresentar a análise assintótica (Big O) de todas as estruturas de dados e algoritmos implementados no projeto, bem como uma comparação teórica entre a BST e a AVL, justificando as escolhas realizadas ao longo do desenvolvimento.
@@ -151,18 +159,10 @@ Conclusão: a BST é mais simples de implementar, porém pode perder desempenho 
 
 ---
 
-## 8. Contribuição dos Integrantes
-
-- Gabriel Luvielmo: Leitura do CSV e implementação das classes.
-- Vitor Kurth: Implementação das Bst's
-- Pedro Zanette: Algoritmos de ordenação e busca.
-- Arthur Kremer: Implementação da AVL.
-- Guilherme Santos Oliveira: Relatório e geração do HTML.
-
----
 
 ## 9. Conclusão Final
 
 O projeto permitiu aplicar na prática os conceitos de estruturas de dados, algoritmos de ordenação, árvores binárias e análise assintótica. A escolha das estruturas foi feita visando desempenho, organização e clareza dos dados.
 
 ---
+
