@@ -35,23 +35,6 @@ Relatório (PDF ou MD) com: arquitetura, explicações de complexidade, prints d
 
 
 
-## Estrutura Recomendada de Arquivos (Pasta do Projeto)
-  project/
-  ├─ data/
-  │  └─ results.csv
-  ├─ output/
-  │  └─ matches_summary.csv
-  ├─ src/
-  │  ├─ data_structs.py
-  │  ├─ bst.py
-  │  ├─ avl.py
-  │  ├─ sorting.py
-  │  ├─ search.py
-  │  └─ main.py
-  └─ report.md
-
-
-
 ## Etapa 1 Modelagem: Classes Match, Team
 CAPACIDADE:
 Manipular estruturas de dados;
