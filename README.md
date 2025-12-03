@@ -1,6 +1,6 @@
 # Trabalho-Estrutura-de-dados
 
-##Visão Geral
+## Visão Geral
 Este documento contém a proposta completa do trabalho. O objetivo é entregar um trabalho que cubra:
 Estruturas de dados básicas (pilha, fila, fila circular, lista, lista encadeada, dicionário/objetos)
 Manipulação de CSV (leitura e escrita)
@@ -12,7 +12,7 @@ O trabalho foi projetado para execução em 3 horas de aula, em grupos de 5 alun
 
 
 
-##Dataset
+## Dataset
 Usar apenas o arquivo results.csv do dataset Global Football Goalscorers Dataset (Kaggle). Todas as tarefas, filtros e arquivos gerados devem partir desse CSV.
 date — A data em que a partida internacional de futebol foi disputada.
 home_team — A seleção nacional listada como time da casa ou equipe anfitriã da partida.
@@ -28,14 +28,14 @@ neutral — Indica se a partida foi disputada em um campo neutro.
 
 
 
-##Entregáveis Esperados
+## Entregáveis Esperados
 Código fonte (módulos Python) organizado como indicado.
 matches_summary.csv gerado pelo programa (formato descrito abaixo).
 Relatório (PDF ou MD) com: arquitetura, explicações de complexidade, prints de execução e contribuição de cada membro.
 
 
 
-##Estrutura Recomendada de Arquivos (Pasta do Projeto)
+## Estrutura Recomendada de Arquivos (Pasta do Projeto)
   project/
   ├─ data/
   │  └─ results.csv
@@ -52,7 +52,7 @@ Relatório (PDF ou MD) com: arquitetura, explicações de complexidade, prints d
 
 
 
-##Etapa 1 Modelagem: Classes Match, Team
+## Etapa 1 Modelagem: Classes Match, Team
 CAPACIDADE:
 Manipular estruturas de dados;
 Implementar estruturas de dados;
@@ -72,7 +72,7 @@ Complexidade dos Algoritmos (Big O)
 
 
 
-##Etapa 2  Leitura do CSV e população das estruturas
+## Etapa 2  Leitura do CSV e população das estruturas
 CAPACIDADE:
 Manipular estruturas de dados;
 Implementar estruturas de dados;
@@ -92,7 +92,7 @@ Saída obrigatória nesta etapa: número total de jogos lidos e gravados.
 
 
 
-##Etapa 3 : Implementar BSTs
+## Etapa 3 : Implementar BSTs
 CAPACIDADE:
 Manipular estruturas de dados;
 Implementar estruturas de dados;
@@ -108,7 +108,7 @@ Complexidade dos Algoritmos (Big O)
 
 
 
-##Etapa 4  Ordenação
+## Etapa 4  Ordenação
 CAPACIDADE:
 Manipular estruturas de dados;
 Implementar estruturas de dados;
@@ -130,7 +130,7 @@ Complexidade dos Algoritmos (Big O)
 
 
 
-##Etapa 5 AVL por Pontos 
+## Etapa 5 AVL por Pontos 
 CAPACIDADE:
 Manipular estruturas de dados;
 Implementar estruturas de dados;
@@ -147,7 +147,7 @@ Funções: insert(seleção), root() que retorna a raiz da árvore, height() ret
 
 
 
-##Etapa 6 Geração do CSV matches_summary.csv 
+## Etapa 6 Geração do CSV matches_summary.csv 
 CAPACIDADE:
 Manipular arquivos de dados (binários e texto); 
 Selecionar e implementar métodos de pesquisa; 
@@ -161,7 +161,7 @@ O que fazer: ao final, gravar todos os Match processados em output/matches_summa
 
 
 
-##Etapa 7 Relatório e Análise Assintótica
+## Etapa 7 Relatório e Análise Assintótica
 CAPACIDADE:
 Manipular estruturas de dados;
 Implementar estruturas de dados;
