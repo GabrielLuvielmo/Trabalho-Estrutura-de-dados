@@ -179,7 +179,3 @@ Salvar em:
 - Justificativa das escolhas  
 - Contribuição dos membros  
 
----
-
-✔ **README formatado e pronto para uso!**  
-Se quiser, posso gerar também um *template* do repositório ou os arquivos iniciais do projeto.
